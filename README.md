@@ -44,8 +44,6 @@ The Group Comparison context menu allows you to display and export the differenc
 
 > **Note:** Further and more detailed information can be found in the user manual.
 
-# German
-
 # AdSnooper - DE
 Tool zum Durchsuchen des Active Directory nach Personen oder Gruppen.
 
