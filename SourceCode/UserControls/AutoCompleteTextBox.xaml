@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="AdSnooperGui.UserControls.AutoCompleteTextBox"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:AdSnooperGui.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="25" d:DesignWidth="100" > 
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="0" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <!-- textbox -->
+        <TextBox Grid.Row="0" Grid.Column="0" x:Name="autoTextBox" TextChanged="AutoTextBox_TextChanged"
+            Text="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}},Path=Text,UpdateSourceTrigger=PropertyChanged}"
+            TextWrapping="NoWrap"
+            HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+            PreviewKeyDown="autoTextBox_KeyPressed"
+                 />
+        <!-- Auto Suggestion box -->
+        <!-- 
+            KeyUp="autoTextBox_KeyPressed"  
+        -->
+        <Popup Grid.Row="1" Grid.Column="0" x:Name="autoListPopup"    
+            Visibility="Visible"                     
+            Height="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}},Path=SuggestionListHeight}" 
+            Width="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}},Path=SuggestionListWidth}"
+            VerticalOffset="-3" 
+            StaysOpen="False"    
+            Placement="Bottom">
+            <ListBox x:Name="autoList" 
+                Visibility="Collapsed"    BorderThickness="2" BorderBrush="{StaticResource PrimaryColor_01}"
+                Height="{Binding RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type UserControl}},Path=SuggestionListHeight}"   
+                MouseDoubleClick="autoList_MouseButtonDown"
+                KeyDown="autoList_KeyDown" 
+                ItemContainerStyle="{DynamicResource ListBoxItemStyle1}" />
+        </Popup>
+    </Grid>
+</UserControl>

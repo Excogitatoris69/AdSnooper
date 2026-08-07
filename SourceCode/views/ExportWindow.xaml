@@ -1,0 +1,146 @@
+﻿<Window x:Class="AdSnooperGui.views.ExportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdSnooperGui.views"
+        xmlns:vm="clr-namespace:AdSnooperGui.viewmodels"
+        xmlns:models="clr-namespace:AdSnooperGui.models"
+        xmlns:p="clr-namespace:AdSnooperGui.Properties"
+        mc:Ignorable="d"
+        Title="{Binding windowTitle}" Height="350" Width="700" ResizeMode="NoResize"
+        Icon="/images/ADSnooper.ico" 
+        >
+
+    <Grid >
+        <!-- 
+        
+        -->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="680" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="250" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+        
+        
+        <!--  Settings -->
+        <GroupBox Grid.Row="0" Grid.Column="0" Margin="5,5,5,0" Header="{x:Static p:Resources.L030_Settings}" Background="{StaticResource PrimaryColor_06}">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="90" />
+                    <ColumnDefinition Width="300" />
+                    <ColumnDefinition Width="250" />
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="30" />
+                </Grid.RowDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Content="{x:Static p:Resources.L033_Header}" />
+                <CheckBox Grid.Row="0" Grid.Column="1" IsChecked="{Binding isHeader}" VerticalAlignment="Center" HorizontalAlignment="Left" />
+
+                <Label  Grid.Row="1" Grid.Column="0" Content="{x:Static p:Resources.L034_Delimiter}" />
+                <ComboBox Grid.Row="1" Grid.Column="1" ItemsSource="{Binding delimiterList}" SelectedIndex="{Binding selectedDelimiterIndex}" Width="120" Height="22" HorizontalAlignment="Left" >
+                    <!-- 
+                    -->
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding displayName}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <!-- 
+                <Label Grid.Row="2" Grid.Column="0" Content="{x:Static p:Resources.L035_Linefeed}" />
+                <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding linefeedList}" SelectedIndex="{Binding selectedLinefeedIndex}" Width="120" Height="22" HorizontalAlignment="Left" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding displayName}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                -->
+
+                <Label Grid.Row="2" Grid.Column="0" Content="{x:Static p:Resources.L036_Format}" />
+                <ComboBox Grid.Row="2" Grid.Column="1" ItemsSource="{Binding outputList}" Width="120" Height="22" HorizontalAlignment="Left" SelectedIndex="{Binding selectedOutputIndex}" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding displayName}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <Label Grid.Row="3" Grid.Column="0" Content="{x:Static p:Resources.L037_Destination}" />
+                <ComboBox Grid.Row="3" Grid.Column="1" ItemsSource="{Binding destinationList}" Width="120" Height="22" HorizontalAlignment="Left" SelectedIndex="{Binding selectedDestinationIndex}" >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="{Binding displayName}" />
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+                <!-- 
+                <Label Grid.Row="5" Grid.Column="0" Content="{x:Static p:Resources.L038_Filepath}" />
+                <StackPanel Grid.Row="5" Grid.Column="1" Orientation="Horizontal">
+                    <TextBox  VerticalAlignment="Center" Text="{Binding filePath}" Height="22" Width="250" />
+                    <Button Content="..." Width="30" Margin="0,0,0,0" Height="22"/>
+                </StackPanel>
+                -->
+            
+                <!-- Column selection -->
+                <Grid Grid.Row="0" Grid.Column="3" Grid.RowSpan="6" >
+                    <DataGrid Grid.Row="0" Grid.Column="1"  Margin="0" CanUserResizeRows="False" CanUserReorderColumns="False" AutoGenerateColumns="false" CanUserSortColumns="False" 
+                              ItemsSource="{Binding propertyList}">
+                        <DataGrid.Columns>
+                            <DataGridCheckBoxColumn Header=" " Binding="{Binding isChecked,Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"  Width="20"   />
+                            <DataGridTextColumn Header="{x:Static p:Resources.L002_Property}" Binding="{Binding displayName}" Width="*" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+        
+                <!-- column selct buttons -->
+                <StackPanel Grid.Row="6" Grid.Column="2" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,5,0,0" >
+                    <Button Template="{DynamicResource ButtonTemplate1}" Content="{x:Static p:Resources.L042_All}" Click="ButtonSelectAll_Click" Height="25" Margin="5,0,0,0" Width="60" >
+                    </Button>
+                    <Button Template="{DynamicResource ButtonTemplate1}" Content="{x:Static p:Resources.L043_Nothing}" Click="ButtonSelectNone_Click" Height="25" Margin="5,0,0,0" Width="60" >
+                    </Button>
+                    <Button Template="{DynamicResource ButtonTemplate1}" Content="{x:Static p:Resources.L044_Inverse}" Click="ButtonInvertSelection_Click" Height="25" Margin="5,0,0,0" Width="60" >
+                    </Button>
+                </StackPanel>
+
+                <!-- Buttons Save -->
+                <!-- 
+                <StackPanel Grid.Row="6" Grid.Column="1" Orientation="Horizontal" Margin="0,5,0,0">
+                    <Button Content="{x:Static p:Resources.L041_Save}" Height="25"  Margin="0,0,0,0" Width="60" Click="ButtonSave_Click" />
+                </StackPanel>
+                -->
+
+            </Grid> 
+        </GroupBox>
+        
+        <!-- Buttons Export  -->
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Horizontal" Margin="10,0,0,0" Height="30">
+            <Button Template="{DynamicResource ButtonTemplate1}" Content="{x:Static p:Resources.L039_Export}" Height="25" Margin="5,0,0,0" Width="60" Click="ButtonExport_Click" >
+            </Button>
+            <Button Template="{DynamicResource ButtonTemplate1}" Content="{x:Static p:Resources.L052_Close}" Height="25" Margin="15,0,0,0" Width="60" Click="ButtonClose_Click" >
+            </Button>
+        </StackPanel>
+        
+    </Grid>
+    
+    
+</Window>

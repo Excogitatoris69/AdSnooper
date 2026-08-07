@@ -1,0 +1,139 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<AdSnooperSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<adsettings>
+		<attributes>
+			<user>
+				<attribute id="1" name="cn" >
+					<label lang="EN" value="Name" />
+					<label lang="DE" value="Name" />
+				</attribute>
+				<attribute id="2" name="givenname" >
+					<label lang="EN" value="Givenname" />
+					<label lang="DE" value="Vorname" />
+				</attribute>
+				<attribute id="3" name="sn" >
+					<label lang="EN" value="Lastname" />
+					<label lang="DE" value="Nachname" />
+				</attribute>
+				<attribute id="4" name="initials" >
+					<label lang="EN" value="Initials" />
+					<label lang="DE" value="Anrede" />
+				</attribute>
+				<attribute id="5" name="displayname" >
+					<label lang="EN" value="Displayname" />
+					<label lang="DE" value="Anzeigename" />
+				</attribute>
+				<attribute id="6" name="description" >
+					<label lang="EN" value="Description" />
+					<label lang="DE" value="Beschreibung" />
+				</attribute>
+				<attribute id="7" name="company" >
+					<label lang="EN" value="Company" />
+					<label lang="DE" value="Firma" />
+				</attribute>
+				<attribute id="8" name="department" >
+					<label lang="EN" value="Department" />
+					<label lang="DE" value="Abteilung" />
+				</attribute>
+				<attribute id="9" name="physicaldeliveryofficename" >
+					<label lang="EN" value="Office" />
+					<label lang="DE" value="Büro" />
+				</attribute>
+				<attribute id="10" name="co" >
+					<label lang="EN" value="State" />
+					<label lang="DE" value="Land" />
+				</attribute>
+				<attribute id="11" name="c" >
+					<label lang="EN" value="Country" />
+					<label lang="DE" value="Länderkürzel" />
+				</attribute>
+				<attribute id="12" name="mail" >
+					<label lang="EN" value="Mail" />
+					<label lang="DE" value="Mail" />
+				</attribute>
+				<attribute id="13" name="telephonenumber" >
+					<label lang="EN" value="Telephone" />
+					<label lang="DE" value="Telefon" />
+				</attribute>
+				<attribute id="14" name="mobile" >
+					<label lang="EN" value="Mobile" />
+					<label lang="DE" value="Handy" />
+				</attribute>
+				<attribute id="15" name="facsimiletelephonenumber" >
+					<label lang="EN" value="Facsimile" />
+					<label lang="DE" value="Fax" />
+				</attribute>
+				<attribute id="16" name="streetaddress" >
+					<label lang="EN" value="Streetaddress" />
+					<label lang="DE" value="Adresse" />
+				</attribute>
+				<attribute id="17" name="postalcode" >
+					<label lang="EN" value="Postalcode" />
+					<label lang="DE" value="PLZ" />
+				</attribute>
+				<attribute id="18" name="l" >
+					<label lang="EN" value="City" />
+					<label lang="DE" value="Ort" />
+				</attribute>
+				<attribute id="19" name="distinguishedname" >
+					<label lang="EN" value="Distinguishedname" />
+					<label lang="DE" value="Distinguishedname" />
+				</attribute>
+				<attribute id="20" name="memberof" >
+					<label lang="EN" value="MemberOfGroup" />
+					<label lang="DE" value="Mitglied in Gruppe" />
+				</attribute>
+				<attribute id="21" name="whenchanged" >
+					<label lang="EN" value="Account changed on" />
+					<label lang="DE" value="Account geändert am" />
+				</attribute>
+				<attribute id="22" name="whencreated" >
+					<label lang="EN" value="Account created on" />
+					<label lang="DE" value="Account angelegt am" />
+				</attribute>
+				<attribute id="23" name="lastlogon" formatername="Integer8" >
+					<label lang="EN" value="Last logon" />
+					<label lang="DE" value="Letzte Anmeldung" />
+				</attribute>
+				<attribute id="24" name="logoncount" >
+					<label lang="EN" value="Logon Counter" />
+					<label lang="DE" value="Anzahl Logon" />
+				</attribute>
+				<attribute id="25" name="pwdlastset" formatername="Integer8" >
+					<label lang="EN" value="Pwd last changed" />
+					<label lang="DE" value="Pw geändert am" />
+				</attribute>			
+				<!-- 
+				-->
+			</user>
+			<group>
+				<attribute id="1" name="cn" >
+					<label lang="EN" value="Name" />
+					<label lang="DE" value="Name" />
+				</attribute>
+				<attribute id="2" name="description" >
+					<label lang="EN" value="Description" />
+					<label lang="DE" value="Beschreibung" />
+				</attribute>
+				<attribute id="3" name="distinguishedname" >
+					<label lang="EN" value="Distinguishedname" />
+					<label lang="DE" value="Distinguishedname" />
+				</attribute>
+				<attribute id="4" name="member" >
+					<label lang="EN" value="Member" />
+					<label lang="DE" value="Mitglieder" />
+				</attribute>
+				<attribute id="5" name="whenchanged" >
+					<label lang="EN" value="Group changed on" />
+					<label lang="DE" value="Gruppe geändert am" />
+				</attribute>
+				<attribute id="6" name="whencreated" >
+					<label lang="EN" value="Group created on" />
+					<label lang="DE" value="Gruppe angelegt am" />
+				</attribute>	
+				<!-- 
+				-->
+			</group>
+		</attributes>
+	</adsettings>
+</AdSnooperSettings>

@@ -1,0 +1,185 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>ADSnooper</AssemblyName>
+    <Copyright>Oliver Matle</Copyright>
+    <ApplicationIcon>images\ADSnooper.ico</ApplicationIcon>
+    <Version>1.0.0</Version>
+    <Authors>Oliver Matle</Authors>
+	  <!-- verhindert die vielen Language-Folder im Publish-Verzeichnis -->
+    <SatelliteResourceLanguages>XXX</SatelliteResourceLanguages>
+    <StartupObject>AdSnooperGui.App</StartupObject>
+
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="images\AddDocument.png" />
+    <None Remove="images\ADSnooper.ico" />
+    <None Remove="images\ADSnooper.png" />
+    <None Remove="images\Book.png" />
+    <None Remove="images\Close.png" />
+    <None Remove="images\Compare.png" />
+    <None Remove="images\CopyBlackWhite32.png" />
+    <None Remove="images\CopyCsv.png" />
+    <None Remove="images\CopyList.png" />
+    <None Remove="images\CopyTable.png" />
+    <None Remove="images\CopyValue.png" />
+    <None Remove="images\DiskSave.png" />
+    <None Remove="images\DiskSaveAs.png" />
+    <None Remove="images\ExclamationmarkRed128.png" />
+    <None Remove="images\Export.png" />
+    <None Remove="images\FileOpen.png" />
+    <None Remove="images\InvalidData.png" />
+    <None Remove="images\Play.png" />
+    <None Remove="images\QuestionmarkWhite32.png" />
+    <None Remove="images\Settings.png" />
+    <None Remove="images\SettingsGear.png" />
+    <None Remove="images\StopRunning.png" />
+    <None Remove="images\Trash.png" />
+    <None Remove="images\ValidData.png" />
+    <None Remove="images\warning.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="images\ADSnooper.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AvalonEdit" Version="6.3.1.120" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AdAdapterSimu\AdAdapterSimu.csproj" />
+    <ProjectReference Include="..\AdAdapter\AdAdapter.csproj" />
+    <ProjectReference Include="..\CoreAdSnooper\CoreAdSnooper.csproj" />
+    <ProjectReference Include="..\DomainAdSnooper\DomainAdSnooper.csproj" />
+    <ProjectReference Include="..\ExportAdapter\ExportAdapter.csproj" />
+    <ProjectReference Include="..\FileManagementAdapter\FileManagementAdapter.csproj" />
+    <ProjectReference Include="..\SqlParserAdapter\SqlParserAdapter.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="adsnooper.xml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="AdSnooperRSA.pub">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="documents\ExclamationmarkBlue500.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="images\AddDocument.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ADSnooper.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ADSnooper.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Book.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Close.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Compare.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\CopyCsv.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\CopyList.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\CopyTable.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\CopyValue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\DiskSave.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\DiskSaveAs.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ExclamationmarkBlue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ExclamationmarkRed.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Export.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\FileOpen.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\InvalidData.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Play.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\QuestionmarkBlue.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\QuestionmarkWhite32.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\SettingsGear.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\StopRunning.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\Trash.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\ValidData.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+	<!-- *********************************************** -->
+	<!-- Build Parser -->
+	<!-- *********************************************** -->
+	<Target Name="BuildAll">
+		<MSBuild Projects="..\SqlParserAdapter\SqlParserAdapter.csproj" Targets="GenParser" />
+		<!-- 
+		<MSBuild Projects="AdSnooperGui.csproj" Targets="Build" />
+		-->
+	</Target>
+
+</Project>

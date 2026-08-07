@@ -1,0 +1,55 @@
+﻿<Window x:Class="AdSnooperGui.views.GroupDiffWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AdSnooperGui.views"
+        xmlns:common="clr-namespace:AdSnooperGui.common"
+        xmlns:vm="clr-namespace:AdSnooperGui.viewmodels"
+        xmlns:models="clr-namespace:AdSnooperGui.models"
+        xmlns:p="clr-namespace:AdSnooperGui.Properties"
+        mc:Ignorable="d"
+        Title="{Binding windowTitle}" 
+        Left="{Binding windowLeft, Mode=TwoWay}"
+        Top="{Binding windowTop, Mode=TwoWay}"
+        Width="{Binding windowWidth, Mode=TwoWay, FallbackValue=400}"
+        Height="{Binding windowHeight, Mode=TwoWay, FallbackValue=200}"
+        Icon="/images/ADSnooper.ico"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="45" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="25" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="{x:Static p:Resources.L068_Filter}" Margin="0,0,0,0" Foreground="{StaticResource PrimaryColor_03}" Background="{StaticResource PrimaryColor_06}" />
+        <TextBox Grid.Row="0" Grid.Column="1" x:Name="tbGroupTextFilter" Text="" IsManipulationEnabled="True" Height="22" Width="300" HorizontalAlignment="Left" TextChanged="tbGroupTextFilter_TextChanged" />
+
+        <DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Name="dataGridGroupDiff" SelectionChanged="dataGridGroupDiff_SelectionChanged" ItemsSource="{Binding rowList}" CanUserResizeRows="False" CanUserReorderColumns="False" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Extended" >
+            <!-- 
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Col-1" Binding="{Binding cellData[0]}" Width="200" />
+                <DataGridTextColumn Header="Col-2" Binding="{Binding cellData[1]}" Width="200" />
+                <DataGridTextColumn Header="Col-3" Binding="{Binding cellData[2]}" Width="200" />
+            </DataGrid.Columns>
+            -->
+            <DataGrid.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="{x:Static p:Resources.L054_Copy}" Command="{Binding cmdGroupCopyClipboard}" >
+                        <MenuItem.Icon>
+                            <Image Source="/images/CopyTable.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="{x:Static p:Resources.L057_CopyNameOnly}" Command="{Binding cmdGroupCopyNameClipboard}" >
+                        <MenuItem.Icon>
+                            <Image Source="/images/CopyCsv.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+        </DataGrid>
+    </Grid>
+</Window>

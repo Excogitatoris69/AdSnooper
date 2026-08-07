@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="L001_Search" xml:space="preserve">
+    <value>_Suche</value>
+  </data>
+  <data name="L002_Property" xml:space="preserve">
+    <value>Eigenschaft</value>
+  </data>
+  <data name="L003_Value" xml:space="preserve">
+    <value>Wert</value>
+  </data>
+  <data name="L004_MemberOfGroups" xml:space="preserve">
+    <value>Mitglied der Gruppe</value>
+  </data>
+  <data name="L005_Person" xml:space="preserve">
+    <value>Person</value>
+  </data>
+  <data name="L006_Group" xml:space="preserve">
+    <value>Gruppe</value>
+  </data>
+  <data name="L007_Active" xml:space="preserve">
+    <value>Aktiv</value>
+  </data>
+  <data name="L008_PersonalId" xml:space="preserve">
+    <value>Personalnr.</value>
+  </data>
+  <data name="L009_Salutation" xml:space="preserve">
+    <value>Anrede</value>
+  </data>
+  <data name="L010_DisplayName" xml:space="preserve">
+    <value>Anzeigename</value>
+  </data>
+  <data name="L011_FirstName" xml:space="preserve">
+    <value>Vorname</value>
+  </data>
+  <data name="L012_LastName" xml:space="preserve">
+    <value>Nachname</value>
+  </data>
+  <data name="L013_Department" xml:space="preserve">
+    <value>Abteilung</value>
+  </data>
+  <data name="L014_Email" xml:space="preserve">
+    <value>E-Mail</value>
+  </data>
+  <data name="L015_TelephoneNumber" xml:space="preserve">
+    <value>Telefon</value>
+  </data>
+  <data name="L016_FaxNumber" xml:space="preserve">
+    <value>Fax</value>
+  </data>
+  <data name="L017_MobileNumber" xml:space="preserve">
+    <value>Mobil</value>
+  </data>
+  <data name="L018_Description" xml:space="preserve">
+    <value>Beschreibung</value>
+  </data>
+  <data name="L019_StreetAddress" xml:space="preserve">
+    <value>Anschrift</value>
+  </data>
+  <data name="L020_PostalCode" xml:space="preserve">
+    <value>PLZ</value>
+  </data>
+  <data name="L021_Location" xml:space="preserve">
+    <value>Ort</value>
+  </data>
+  <data name="L022_RoomNumber" xml:space="preserve">
+    <value>Raum</value>
+  </data>
+  <data name="L023_Company" xml:space="preserve">
+    <value>Firma</value>
+  </data>
+  <data name="L024_CompanyLong" xml:space="preserve">
+    <value>Firma lang</value>
+  </data>
+  <data name="L025_CountryCode" xml:space="preserve">
+    <value>Ländercode</value>
+  </data>
+  <data name="L026_Name" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="L027_Groups" xml:space="preserve">
+    <value>Gruppen</value>
+  </data>
+  <data name="L028_Persons" xml:space="preserve">
+    <value>Personen</value>
+  </data>
+  <data name="L029_Language" xml:space="preserve">
+    <value>Sprache</value>
+  </data>
+  <data name="L030_Settings" xml:space="preserve">
+    <value>Einstellungen</value>
+  </data>
+  <data name="L031_English" xml:space="preserve">
+    <value>Englisch</value>
+  </data>
+  <data name="L032_German" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="L033_Header" xml:space="preserve">
+    <value>Überschrift</value>
+  </data>
+  <data name="L034_Delimiter" xml:space="preserve">
+    <value>Trennung</value>
+  </data>
+  <data name="L035_Linefeed" xml:space="preserve">
+    <value>Zeilenende</value>
+  </data>
+  <data name="L036_Format" xml:space="preserve">
+    <value>Format</value>
+  </data>
+  <data name="L037_Destination" xml:space="preserve">
+    <value>Ziel</value>
+  </data>
+  <data name="L038_Filepath" xml:space="preserve">
+    <value>Dateipfad</value>
+  </data>
+  <data name="L039_Export" xml:space="preserve">
+    <value>Export</value>
+  </data>
+  <data name="L040_Cancel" xml:space="preserve">
+    <value>Abbruch</value>
+  </data>
+  <data name="L041_Save" xml:space="preserve">
+    <value>Speichern</value>
+  </data>
+  <data name="L042_All" xml:space="preserve">
+    <value>Alles</value>
+  </data>
+  <data name="L043_Nothing" xml:space="preserve">
+    <value>Nichts</value>
+  </data>
+  <data name="L044_Inverse" xml:space="preserve">
+    <value>Invertiert</value>
+  </data>
+  <data name="L045_Semikolon" xml:space="preserve">
+    <value>Semikolon</value>
+  </data>
+  <data name="L046_Comma" xml:space="preserve">
+    <value>Komma</value>
+  </data>
+  <data name="L047_Space" xml:space="preserve">
+    <value>Leerzeichen</value>
+  </data>
+  <data name="L048_Tabulator" xml:space="preserve">
+    <value>Tabulator</value>
+  </data>
+  <data name="L049_File" xml:space="preserve">
+    <value>Datei</value>
+  </data>
+  <data name="L050_Clipboard" xml:space="preserve">
+    <value>Zwischenablage</value>
+  </data>
+  <data name="L051_MemberList" xml:space="preserve">
+    <value>Mitglieder</value>
+  </data>
+  <data name="L052_Close" xml:space="preserve">
+    <value>Schließen</value>
+  </data>
+  <data name="L053_Export2" xml:space="preserve">
+    <value>Export...</value>
+  </data>
+  <data name="L054_Copy" xml:space="preserve">
+    <value>Kopieren</value>
+  </data>
+  <data name="L055_CopyValue" xml:space="preserve">
+    <value>Kopiere Wert</value>
+  </data>
+  <data name="L056_GroupName" xml:space="preserve">
+    <value>Gruppenname</value>
+  </data>
+  <data name="L057_CopyNameOnly" xml:space="preserve">
+    <value>Kopiere Namen</value>
+  </data>
+  <data name="L058_IncorrectSearchParameters" xml:space="preserve">
+    <value>Falsche Suchparameter</value>
+  </data>
+  <data name="M001_IncorrectSearchParameters" xml:space="preserve">
+    <value>Die Suchparameter sind nicht korrekt. Folgende Regeln müssen berücksichtigt werden:</value>
+  </data>
+  <data name="M002_AllFieldsEmpty" xml:space="preserve">
+    <value>Mindestens ein Suchfeld muss befüllt sein.</value>
+  </data>
+  <data name="M003_BeginWithAsterisk" xml:space="preserve">
+    <value>Darf nicht mit Sternchen beginnen.</value>
+  </data>
+  <data name="M004_ContainsAsterisk" xml:space="preserve">
+    <value>Darf kein Sternchen enthalten.</value>
+  </data>
+  <data name="M005_ContainsDelimiter" xml:space="preserve">
+    <value>Darf keine Trennzeichen wie Komma oder Semikolon enthalten.</value>
+  </data>
+  <data name="L059_SearchFailed" xml:space="preserve">
+    <value>Suche fehlgeschlagen</value>
+  </data>
+  <data name="M006_SearchFailed" xml:space="preserve">
+    <value>Bei der Suche ist ein Fehler aufgetreten. Die folgende Fehlermeldung wurde vom aufgerufenen System ausgegeben.</value>
+  </data>
+  <data name="L060_Manual" xml:space="preserve">
+    <value>Anleitung</value>
+  </data>
+  <data name="L061_GroupMember" xml:space="preserve">
+    <value>Gruppenmitglieder</value>
+  </data>
+  <data name="L062_DistinguishedName" xml:space="preserve">
+    <value>Distinguished Name</value>
+  </data>
+  <data name="L063_DiffGroups" xml:space="preserve">
+    <value>Gruppenvergleich</value>
+  </data>
+  <data name="L064_DiffGroups2" xml:space="preserve">
+    <value>Gruppenvergleich...</value>
+  </data>
+  <data name="L065_CopyPersonalIdAsCsv" xml:space="preserve">
+    <value>Kopiere ID als CSV</value>
+  </data>
+  <data name="L066_CopyAsCsv" xml:space="preserve">
+    <value>Kopiere als CSV</value>
+  </data>
+  <data name="L067_Cache" xml:space="preserve">
+    <value>Cache</value>
+  </data>
+  <data name="L068_Filter" xml:space="preserve">
+    <value>Filter:</value>
+  </data>
+  <data name="L069_ImportantNotice" xml:space="preserve">
+    <value>Wichtiger Hinweis</value>
+  </data>
+  <data name="M007_TrialPeriodHasEnded" xml:space="preserve">
+    <value>Das Programm darf während des Testzeitraums kostenlos und uneingeschränkt verwendet und getestet werden.
+
+Dieser Testzeitraum ist aber jetzt leider beendet.
+Dieser Hinweis erscheint ab jetzt immer beim Programmstart.</value>
+  </data>
+  <data name="M008_TrialPeriodHasEnded2" xml:space="preserve">
+    <value>Das Programm konnte jetzt wirklich lange kostenlos getestet werden.
+Die Testzeit ist lange zu Ende - doch das wurde ignoriert. Jetzt ist aber Schluss damit. </value>
+  </data>
+  <data name="L070_Ignore" xml:space="preserve">
+    <value>Ist mir egal</value>
+  </data>
+  <data name="M009_InvalidLicensefile" xml:space="preserve">
+    <value>Die Lizensdatei ist ungültig.</value>
+  </data>
+  <data name="M010_UnsafedData" xml:space="preserve">
+    <value>Die Daten wurden geändert und noch nicht gespeichert</value>
+  </data>
+  <data name="L071_UnsafedData" xml:space="preserve">
+    <value>Ungespeicherte Daten</value>
+  </data>
+  <data name="L072_NewQuery" xml:space="preserve">
+    <value>Neue Abfrage</value>
+  </data>
+  <data name="M011_InputNewQueryName" xml:space="preserve">
+    <value>Name für neue Abfrage eingeben</value>
+  </data>
+  <data name="L073_DeleteAreYouSure" xml:space="preserve">
+    <value>Daten löschen</value>
+  </data>
+  <data name="M012_DeleteQuery" xml:space="preserve">
+    <value>Soll die Abfrage inkl. Datei wirklich gelöscht werden?</value>
+  </data>
+  <data name="L074_OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="L075_SQLBatch" xml:space="preserve">
+    <value>SQL</value>
+  </data>
+  <data name="L076_CopyDistinguishedNameOnly" xml:space="preserve">
+    <value>Kopiere DistinguishedName</value>
+  </data>
+  <data name="L077_Error" xml:space="preserve">
+    <value>Fehler</value>
+  </data>
+  <data name="M013_QueryError" xml:space="preserve">
+    <value>Fehler bei Zugriff oder Abfrage des Active Directory.</value>
+  </data>
+  <data name="M014_ErrorFileExport" xml:space="preserve">
+    <value>Fehler beim Schreiben der Exportdatei.</value>
+  </data>
+  <data name="L078_Yes" xml:space="preserve">
+    <value>Ja</value>
+  </data>
+  <data name="L079_Subgroup" xml:space="preserve">
+    <value>Untergruppe</value>
+  </data>
+  <data name="L080_CopyEmailAsCsv" xml:space="preserve">
+    <value>Kopiere E-Mail als CSV</value>
+  </data>
+  <data name="L081_CopyNameAsCsv" xml:space="preserve">
+    <value>Kopiere Name als CSV</value>
+  </data>
+  <data name="L082_License" xml:space="preserve">
+    <value>Lizenz</value>
+  </data>
+  <data name="L083_Customer" xml:space="preserve">
+    <value>Anwender</value>
+  </data>
+  <data name="L084_Address" xml:space="preserve">
+    <value>Adresse</value>
+  </data>
+  <data name="L085_LicenseType" xml:space="preserve">
+    <value>Lizenztyp</value>
+  </data>
+  <data name="L086_YourName" xml:space="preserve">
+    <value>Name/Unternehmen</value>
+  </data>
+  <data name="L087_Street" xml:space="preserve">
+    <value>Straße</value>
+  </data>
+  <data name="L088_City" xml:space="preserve">
+    <value>Ort</value>
+  </data>
+  <data name="L089_SingleUser" xml:space="preserve">
+    <value>Einzellizenz</value>
+  </data>
+  <data name="L090_ExpireDate" xml:space="preserve">
+    <value>Zeitbegrenzt</value>
+  </data>
+  <data name="L091_Volume" xml:space="preserve">
+    <value>Volumenlizenz</value>
+  </data>
+  <data name="L092_Count" xml:space="preserve">
+    <value>Anzahl</value>
+  </data>
+  <data name="L093_CreateOrderFile" xml:space="preserve">
+    <value>Erstelle Order-Datei...</value>
+  </data>
+  <data name="L094_ImportLicenseFile" xml:space="preserve">
+    <value>Import Lizenzdatei...</value>
+  </data>
+  <data name="L095_FileNotFound" xml:space="preserve">
+    <value>File not found</value>
+  </data>
+  <data name="M015_AllFieldsMustBeFilledIn" xml:space="preserve">
+    <value>Alle Felder müssen ausgefüllt werden.
+
+Bei Volumenlizenzen muss die Menge einen gültigen Wert größer als 0 enthalten.</value>
+  </data>
+  <data name="M016_ImportOrderResponse" xml:space="preserve">
+    <value>Import Order-Response für AD-Snooper</value>
+  </data>
+  <data name="M017_GenerateLicenseOrderFile" xml:space="preserve">
+    <value>Erstelle Order-Datei für AD-Snooper</value>
+  </data>
+  <data name="M018_PurchasingIsEasy" xml:space="preserve">
+    <value>Der Kauf ist ganz einfach
+1) Füllen Sie die Felder aus.
+2) Erstellen Sie eine Anforderungsdatei und senden Sie diese per E-Mail.
+3) Bezahlen Sie die Rechnung.
+4) Sie erhalten die Lizenzdatei per E-Mail und importieren sie.</value>
+  </data>
+  <data name="M019_ErrorLicenceOrderResponseInvalid" xml:space="preserve">
+    <value>Fehlerhafte Lizenzdatei oder falsche Order-Response-Datei.</value>
+  </data>
+  <data name="M020_ErrorDeserialize" xml:space="preserve">
+    <value>Fehler beim Lesen oder falsche Order-Response-Datei.</value>
+  </data>
+  <data name="M022_WarningLicenseFileInvalid" xml:space="preserve">
+    <value>*** Warnung! Lizenzdatei ist ungültig ***</value>
+  </data>
+  <data name="M023_WarningLicenseLimited" xml:space="preserve">
+    <value>*** Warnung! Lizenz hat eine zeitliche Begrenzung. ***</value>
+  </data>
+</root>
