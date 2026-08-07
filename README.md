@@ -12,7 +12,7 @@ The user interface contains a tabbed interface with three sections: Person, Grou
 ### Person Tab
 On the left is the search area with input fields and the Search and Clear buttons. The search results are displayed on the right. They are divided into an overview with specific table columns, and in the lower left, the properties of the selected record and, to the right, the group membership. The data in the table containing group names can be further refined using text filters.
 
-![Tab Person](https://github.com/Excogitatoris69/AdSnooper/Doc/images/AD-Snooper_01.png)
+![Tab Person](https://github.com/Excogitatoris69/AdSnooper/blob/main/Doc/Images/AD-Snooper_01.png)
 
 ### Group Tab
 The structure and layout here are similar to the Person tab – the search area is on the left and the search results are displayed on the right. Here, too, the data can be refined using text filters. For each selected group in the middle section, the group members are displayed to the right.
